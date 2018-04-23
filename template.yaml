@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  lambdaWeather:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambdaWeather/index.handler
+      Runtime: nodejs6.10
+      Description: ''
+      MemorySize: 128
+      Timeout: 15
+      Role: 'arn:aws:iam::xxx:role/LambdaWeather'
+      Environment:
+        Variables:
+          API_KEY: 'xxxxx'
+          COORDS: '40.7127753,-74.0059728'
+          TOPIC: 'arn:aws:sns:us-east-1:xxx:LambdaWeather'
+
