@@ -10,10 +10,10 @@ Resources:
       Description: ''
       MemorySize: 128
       Timeout: 15
-      Role: 'arn:aws:iam::xxx:role/LambdaWeather'
+      Role: 'arn:aws:iam::xxx:role/LambdaWeatherRole'
       Environment:
         Variables:
           API_KEY: 'xxxxx'
           COORDS: '40.7127753,-74.0059728'
-          TOPIC: 'arn:aws:sns:us-east-1:xxx:LambdaWeather'
+          TOPIC: 'arn:aws:sns:us-east-1:xxx:LambdaWeatherTopic'
 
