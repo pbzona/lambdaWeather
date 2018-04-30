@@ -5,7 +5,7 @@ const SNS = new AWS.SNS();
 // In addition to the AWS SDK, we'll use axios to help make our requests
 const axios = require('axios');
 
-// Make sure to define these environment variables in the Lambda dashboard
+// Make sure to define these environment variables in the template.yaml file
 const API_KEY = process.env.API_KEY;
 const COORDS = process.env.COORDS;
 const TOPIC = process.env.TOPIC;
