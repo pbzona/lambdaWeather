@@ -6,6 +6,8 @@ This is an AWS Lambda function that runs each night to send you the following da
 
 To use this function, you'll need a Dark Sky API key. Dark Sky is the service that we'll be using to get weather data - you can create a free account that provides up to 1000 API calls per day [here](https://darksky.net/dev).
 
+**UPDATE** - The Google Geocoding API we use for the helper function as of Summer 2018. The Lambda code will still work just fine, but if you'd like to use the `helper.js` function to generate coordinates, rather than looking them up yourself, you'll need to register for an API key.I've updated the helper script to use the `MAP_KEY` variable (you can set this in the helper script file itself, just be sure not to commit it if you've forked this project 😃). For more info on how to get an API key for Google Geocoding, [check out their docs](https://developers.google.com/maps/documentation/geocoding/start#get-a-key).
+
 ## Installation
 
 1.  In your AWS account, open up a Cloud9 environment. Clone this repo within your `~/environment` directory and run `npm install` to install the dependencies.
